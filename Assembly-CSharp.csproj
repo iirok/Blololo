@@ -64,14 +64,17 @@
      <Compile Include="Assets\lifecounter.cs" />
      <Compile Include="Assets\liikkuvapalikkax.cs" />
      <Compile Include="Assets\liikkuvapalikkay.cs" />
+     <Compile Include="Assets\loppu.cs" />
      <Compile Include="Assets\pause.cs" />
      <Compile Include="Assets\restartti.cs" />
      <Compile Include="Assets\taksipalikkax.cs" />
      <Compile Include="Assets\taksipalikkaxinver.cs" />
+     <Compile Include="Assets\tappio.cs" />
      <Compile Include="Assets\timer.cs" />
      <Compile Include="Assets\timeri.cs" />
      <Compile Include="Assets\ukkeli.cs" />
      <Compile Include="Assets\vihucontrol.cs" />
+     <Compile Include="Assets\voitho.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

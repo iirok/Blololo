@@ -6,7 +6,7 @@ public class timeri : MonoBehaviour {
 
 
 	public float Aika;
-	public float aika1 = 60;
+	public int aika1 = 60;
 	GameObject timer;
 	
 	// Use this for initialization
