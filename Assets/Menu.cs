@@ -7,9 +7,15 @@ public class Menu : MonoBehaviour {
 	GameObject nope;
 	GameObject sure;
 	bool valinta = false;
+	bool firstrun = true;
 
 	// Use this for initialization
 	void Start () {
+
+		if (firstrun) {
+			complete = 0;
+		}
+
 		complete = PlayerPrefs.GetInt ("voitho");
 		nope = GameObject.Find("Canvas/nopemessage").gameObject;
 		nope.SetActive (false);
@@ -21,6 +27,7 @@ public class Menu : MonoBehaviour {
 
 	public void startgame () { 
 		if (complete == 0) {
+			firstrun = false;
 			PlayerPrefs.SetInt ("voitho", 0);
 			PlayerPrefs.SetInt ("pisteet", 0);
 			Application.LoadLevel (1);

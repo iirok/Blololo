@@ -57,7 +57,6 @@ public class coincounter : MonoBehaviour {
 
 
 		coin.GetComponent<Text> () .text = "Coins: " + coins;
-		Debug.Log (kokopisteet);
 
 
 		if (coins >= 30) {
