@@ -5,10 +5,9 @@ using UnityEngine.UI;
 public class voitho : MonoBehaviour {
 
 	public int i;
-	
+	int kokopisteet;
 	GameObject voitto;
 	GameObject pojo;
-	public int kokopisteet;
 	
 	// Use this for initialization
 	void Start () {
@@ -17,7 +16,7 @@ public class voitho : MonoBehaviour {
 		voitto.SetActive(false);
 		Time.timeScale = 1;
 
-		kokopisteet = PlayerPrefs.GetInt ("pisteet");
+
 
 
 		i = Application.loadedLevel;
@@ -27,14 +26,21 @@ public class voitho : MonoBehaviour {
 		
 		Time.timeScale = 0;
 		voitto.SetActive (true);
+		kokopisteet = PlayerPrefs.GetInt ("pisteet");
 		pojo = GameObject.Find ("Canvas/Voithopaneeli/Pojot");
 		pojo.GetComponent<Text> () .text = "Points: " + kokopisteet;
+		if (Input.GetKey (KeyCode.Return)) {
+
+			Application.LoadLevel (i + 1);
+		}
 	}
 	
+
 	public void ok () {
 		Application.LoadLevel (i + 1);
 	}
-	
+
+
 	
 	
 	

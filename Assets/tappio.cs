@@ -19,6 +19,9 @@ public class tappio : MonoBehaviour {
 
 		Time.timeScale = 0;
 		turpaantuli.SetActive (true);
+		if (Input.GetKey (KeyCode.Return))
+		{ Application.LoadLevel (Application.loadedLevel);
+		}
 	}
 
 	public void ok () {

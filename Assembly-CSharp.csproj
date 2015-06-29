@@ -61,10 +61,13 @@
      <Compile Include="Assets\enemy1b.cs" />
      <Compile Include="Assets\kolikko.cs" />
      <Compile Include="Assets\kyltti0.cs" />
+     <Compile Include="Assets\levelcontrol.cs" />
+     <Compile Include="Assets\levelselect.cs" />
      <Compile Include="Assets\lifecounter.cs" />
      <Compile Include="Assets\liikkuvapalikkax.cs" />
      <Compile Include="Assets\liikkuvapalikkay.cs" />
      <Compile Include="Assets\loppu.cs" />
+     <Compile Include="Assets\onnitteluohjain.cs" />
      <Compile Include="Assets\pause.cs" />
      <Compile Include="Assets\restartti.cs" />
      <Compile Include="Assets\taksipalikkax.cs" />

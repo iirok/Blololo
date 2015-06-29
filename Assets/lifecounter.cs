@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class lifecounter : MonoBehaviour {
 
 	GameObject life;
-	GameObject kolikko;
 	public int lives = 3;
 	GameObject tappiomenu;
 	bool defeat = false;
@@ -16,7 +15,6 @@ public class lifecounter : MonoBehaviour {
 	void Start () {
 
 		life = GameObject.Find ("Canvas/lives");
-		kolikko = GameObject.Find ("levelcontrol/coincounter");
 		tappiomenu = GameObject.Find ("Canvas");
 
 

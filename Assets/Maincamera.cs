@@ -28,7 +28,7 @@ public class Maincamera : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-		if (target.position.x >= -1.91f && target.position.x <= 1.85f) 
+		if (target.position.x >= -2.85f && target.position.x <= 2.85f) 
 		{
 			
 			
