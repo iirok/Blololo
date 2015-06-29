@@ -4,24 +4,43 @@ using System.Collections;
 public class Menu : MonoBehaviour {
 
 	public int complete;
+	GameObject nope;
+	GameObject sure;
+	bool valinta = false;
 
 	// Use this for initialization
 	void Start () {
 		complete = PlayerPrefs.GetInt ("voitho");
-
+		nope = GameObject.Find("Canvas/nopemessage").gameObject;
+		nope.SetActive (false);
+		sure = GameObject.Find ("Canvas/varmistus") .gameObject;
+		sure.SetActive (false);
 	  
 	}
 
 
 	public void startgame () { 
-		PlayerPrefs.SetInt ("voitho", 0);
-		PlayerPrefs.SetInt ("pisteet", 0);
-		Application.LoadLevel (1);
+		if (complete == 0) {
+			PlayerPrefs.SetInt ("voitho", 0);
+			PlayerPrefs.SetInt ("pisteet", 0);
+			Application.LoadLevel (1);
+		}
+
+		if (complete == 1) {
+			sure.SetActive (true);
+			valinta = true;
+
+		  }
+
 	}
+
+
 	public void levelselect () { 
 	   
 		if (complete == 1) {
 			Application.LoadLevel (22);
+		} else {
+			nope.SetActive (true);
 		}
 	}
 
@@ -37,5 +56,18 @@ public class Menu : MonoBehaviour {
 			Application.Quit ();
 	}
 	
+		if (valinta) {
+			if (Input.GetKeyDown (KeyCode.Y)){
+				PlayerPrefs.SetInt ("voitho", 0);
+				PlayerPrefs.SetInt ("pisteet", 0);
+				Application.LoadLevel (1);
+			}
+			if (Input.GetKeyDown(KeyCode.N)) {
+				sure.SetActive (false);
+				valinta = false;
+			}
+		}
+
+
 	}
 }
